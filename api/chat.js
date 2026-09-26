@@ -1,7 +1,7 @@
 export default async function handler(request) {
   return new Response(
     JSON.stringify({
-      reply: "Le serveur BizPilot AI fonctionne !"
+      reply: "Connexion Vercel OK"
     }),
     {
       status: 200,
