@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BizPilot AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      color: #111827;
+    }
+
+    header {
+      height: 70px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    .login {
+      background: white;
+      border: 1px solid #d1d5db;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    main {
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 7%;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e9e7ff;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 60px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      font-weight: normal;
+    }
+
+    .description {
+      font-size: 18px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .start {
+      background: #111827;
+      color: white;
+      border: none;
+      padding: 15px 22px;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .start:hover {
+      background: #000;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+    }
+
+    .message {
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .client {
+      background: #111827;
+      color: white;
+      margin-left: 30px;
+    }
+
+    .ai {
+      background: #f0f1f5;
+      margin-right: 20px;
+    }
+
+    .status {
+      margin-top: 20px;
+      color: #3f7d4d;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    BizPilot <span>AI</span>
+  </div>
+
+  <button class="login">
+    Se connecter
+  </button>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <section>
+      <div class="badge">
+        ✦ Assistant IA pour PME
+      </div>
+
+      <h1>
+        Votre entreprise.<br>
+        <span>Votre assistant.</span>
+      </h1>
+
+      <p class="description">
+        Automatisez les réponses clients, les rendez-vous
+        et les tâches répétitives depuis une seule plateforme.
+      </p>
+
+      <button class="start">
+        Commencer gratuitement →
+      </button>
+    </section>
+
+    <section class="card">
+
+      <h2>🤖 Assistant IA</h2>
+
+      <div class="message client">
+        Êtes-vous ouverts samedi ?
+      </div>
+
+      <div class="message ai">
+        Oui 👋 Nous sommes ouverts de 8h à 17h samedi.
+        Puis-je vous aider avec autre chose ?
+      </div>
+
+      <div class="status">
+        ● Assistant actif
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>
