@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord - BizPilot AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      color: #111827;
+    }
+
+    header {
+      height: 70px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    .logout {
+      padding: 10px 16px;
+      border: 1px solid #d1d5db;
+      background: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 7%;
+    }
+
+    .welcome {
+      margin-bottom: 35px;
+    }
+
+    .welcome h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+      min-height: 160px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .active {
+      color: #3f7d4d;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    BizPilot <span>AI</span>
+  </div>
+
+  <button class="logout">
+    Se déconnecter
+  </button>
+</header>
+
+<main>
+
+  <div class="welcome">
+    <h1>Bienvenue sur BizPilot AI 👋</h1>
+    <p>
+      Votre espace de gestion intelligent pour votre entreprise.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>🤖 Assistant IA</h2>
+      <p>
+        Posez vos questions et obtenez de l'aide pour gérer votre activité.
+      </p>
+      <div class="active">● Assistant disponible</div>
+    </div>
+
+    <div class="card">
+      <h2>💬 Messages clients</h2>
+      <p>
+        Centralisez et préparez vos réponses aux clients.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📅 Rendez-vous</h2>
+      <p>
+        Organisez vos rendez-vous et votre planning.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📊 Activité</h2>
+      <p>
+        Consultez les informations importantes de votre entreprise.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Paramètres</h2>
+      <p>
+        Configurez votre espace BizPilot AI.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>✨ Automatisation</h2>
+      <p>
+        Automatisez progressivement vos tâches répétitives.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>
