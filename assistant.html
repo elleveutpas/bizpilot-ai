@@ -175,64 +175,29 @@
 
 </main>
 
-<script>
-
 async function sendMessage() {
-  const input = document.getElementById("messageInput");
+  const input = document.getElementById("userInput");
+  const messages = document.getElementById("messages");
   const message = input.value.trim();
 
-  if (!message) return;
-
-  addMessage(message, "user");
-  input.value = "";
-
-  try {
-    const response = await fetch("https://bizpilot-ai-amber.vercel.app/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        message: message
-      })
-    });
-
-    const data = await response.json();
-
-    if (data.reply) {
-      addMessage(data.reply, "ai");
-    } else {
-      addMessage("Une erreur est survenue.", "ai");
-    }
-
-  } catch (error) {
-    addMessage("Impossible de contacter l'assistant.", "ai");
+  if (!message) {
+    return;
   }
-}
 
   const userMessage = document.createElement("div");
-
   userMessage.className = "message user";
-
-  userMessage.textContent = text;
+  userMessage.textContent = message;
 
   messages.appendChild(userMessage);
-
   input.value = "";
 
   const aiMessage = document.createElement("div");
-
   aiMessage.className = "message ai";
-
-  aiMessage.textContent =
-    "Merci pour votre message. Je suis encore en cours de configuration, mais je pourrai bientôt vous aider avec cette demande.";
+  aiMessage.textContent = "Le serveur BizPilot AI fonctionne !";
 
   messages.appendChild(aiMessage);
-
   messages.scrollTop = messages.scrollHeight;
 }
-
-</script>
 
 </body>
 </html>
