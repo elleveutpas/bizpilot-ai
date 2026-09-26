@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant IA - BizPilot AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      color: #111827;
+    }
+
+    header {
+      height: 70px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    .back {
+      text-decoration: none;
+      color: #111827;
+      border: 1px solid #d1d5db;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .assistant {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+    }
+
+    .assistant-header {
+      padding: 22px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .assistant-header h1 {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .assistant-header p {
+      color: #6b7280;
+    }
+
+    .messages {
+      min-height: 400px;
+      padding: 25px;
+    }
+
+    .message {
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      max-width: 75%;
+      line-height: 1.5;
+    }
+
+    .ai {
+      background: #f0f1f5;
+    }
+
+    .user {
+      background: #111827;
+      color: white;
+      margin-left: auto;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+      padding: 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 9px;
+      font-size: 15px;
+    }
+
+    .input-area button {
+      padding: 14px 22px;
+      background: #111827;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .input-area button:hover {
+      background: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    BizPilot <span>AI</span>
+  </div>
+
+  <a href="dashboard.html" class="back">
+    ← Tableau de bord
+  </a>
+</header>
+
+<main>
+
+  <div class="assistant">
+
+    <div class="assistant-header">
+      <h1>🤖 Assistant IA</h1>
+      <p>Votre assistant pour gérer votre entreprise.</p>
+    </div>
+
+    <div class="messages" id="messages">
+
+      <div class="message ai">
+        Bonjour 👋 Je suis votre assistant BizPilot AI.
+        Comment puis-je vous aider aujourd'hui ?
+      </div>
+
+    </div>
+
+    <div class="input-area">
+
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Écrivez votre message..."
+      >
+
+      <button onclick="sendMessage()">
+        Envoyer
+      </button>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+
+function sendMessage() {
+
+  const input = document.getElementById("userInput");
+  const messages = document.getElementById("messages");
+
+  const text = input.value.trim();
+
+  if (text === "") {
+    return;
+  }
+
+  const userMessage = document.createElement("div");
+
+  userMessage.className = "message user";
+
+  userMessage.textContent = text;
+
+  messages.appendChild(userMessage);
+
+  input.value = "";
+
+  const aiMessage = document.createElement("div");
+
+  aiMessage.className = "message ai";
+
+  aiMessage.textContent =
+    "Merci pour votre message. Je suis encore en cours de configuration, mais je pourrai bientôt vous aider avec cette demande.";
+
+  messages.appendChild(aiMessage);
+
+  messages.scrollTop = messages.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>
